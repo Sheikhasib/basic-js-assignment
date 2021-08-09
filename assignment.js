@@ -51,25 +51,26 @@ function deliveryCost(shirtQuantity){
     }
 }
 const costs = deliveryCost(230);
-// console.log(costs);
+console.log(costs);
 
 // 4.Problem-4
 
 function perfectFriend(names){
-    let largest = names[0];
+    let perfectFriendsName = names[0];
     for(let i = 0; i < names.length; i++){
-        const element = names[i];
-        if(element.length == 5){
-            largest = element;
+        const friendsName = names[i];
+        if(friendsName.length == 5){          
+            perfectFriendsName = friendsName;
+            break;
         }
-        if(typeof names != 'string'){
+        if(typeof names != 'object'){
             return 'Please give a string';
         }
-    }return largest;
+    }return perfectFriendsName;
 }
 const friendNames = ['Taj', 'Jim', 'Rumi', 'Hasan', 'Nafiz', 'Kayes'];
-const perfect = perfectFriend(friendNames);
-console.log(perfect);
+const perfection = perfectFriend(friendNames);
+console.log(perfection);
 
 
 
